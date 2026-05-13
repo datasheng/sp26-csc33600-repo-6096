@@ -1,0 +1,12 @@
+# TradeConnect backend dependencies
+#
+# Only direct imports are listed. Transitive deps (Werkzeug, Jinja2,
+# itsdangerous, click, blinker, MarkupSafe) are installed automatically
+# by Flask. mysql-connector-python is the pure-Python driver imported as
+# `mysql.connector`.
+
+Flask==3.1.3
+flask-cors==6.0.2
+mysql-connector-python==9.6.0
+python-dotenv==1.2.2
+openpyxl==3.1.5

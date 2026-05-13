@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+
+# build outputs
+.next/
+out/
+dist/
+build/
+
+# runtime uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+!backend/uploads/.gitignore
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

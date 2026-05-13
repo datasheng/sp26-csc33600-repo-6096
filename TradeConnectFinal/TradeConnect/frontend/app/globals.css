@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --navy:   #0D1B2A;
+  --steel:  #1B3A4B;
+  --teal:   #00B4D8;
+  --amber:  #F4A261;
+  --cream:  #F7F3EF;
+  --muted:  #8DA9B8;
+  --success:#2EC4B6;
+  --danger: #E63946;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Utility layer ── */
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .text-muted   { color: var(--muted); }
+  .bg-navy      { background-color: var(--navy); }
+  .bg-steel     { background-color: var(--steel); }
+  .bg-teal      { background-color: var(--teal); }
+  .text-teal    { color: var(--teal); }
+  .border-teal  { border-color: var(--teal); }
+
+  /* Status pill colours */
+  .status-pending     { @apply bg-yellow-100 text-yellow-800; }
+  .status-accepted    { @apply bg-blue-100   text-blue-800; }
+  .status-in_progress { @apply bg-purple-100 text-purple-800; }
+  .status-completed   { @apply bg-green-100  text-green-800; }
+  .status-cancelled   { @apply bg-red-100    text-red-800; }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 999px; }
+
+/* ── Focus ring ── */
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
